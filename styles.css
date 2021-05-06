@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #3e2556;
+  color: #fff;
+}
+
+#header {
+  padding: 9em 2.4em 3em 2.4em;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+#header .header-heading {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+#header .header-desc {
+  font-size: 1.4rem;
+}
+
+#main {
+  padding: 2em 1.5em;
+  margin: 0 auto;
+}
+
+#main .keys {
+  display: grid;
+  grid-template-columns: repeat(9, 8rem);
+  grid-template-rows: repeat(1, 8rem);
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#main .keys .key {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.75em 0.5em;
+  border: 0.4rem solid #c75c47;
+  border-radius: 0.5rem;
+  text-shadow: 0 0 0.5rem #000;
+  transition: all 0.07s ease;
+  backface-visibility: hidden;
+}
+
+#main .keys .key > *:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+#main .keys .key kbd {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e9cdda;
+}
+
+#main .keys .keys .sound {
+  display: inline-block;
+  font-size: .75rem;
+}
+
+
+/* use by javaScript  */
+.playing {
+  transform: scale(1.1);
+  border-color: #e2aca1;
+  box-shadow: 0 0 1rem #e2aca1;
+}
+
+@media only screen and (max-width: 55em) { 
+  #header {
+    margin-bottom: 2rem;
+  }
+
+  #header .header-heading {
+    font-size: 3rem;
+  }
+
+  #main .keys {
+    grid-template-columns: repeat(3, 8rem);   
+  }
+}
